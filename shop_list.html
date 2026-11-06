@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ショップ - Trashbusters</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="status-bar">
+      <span>9:30</span>
+      <span>📶 🔋</span>
+    </div>
+    
+    <header class="app-header">
+      <div class="header-title">ショップ</div>
+    </header>
+    <main class="main-content">
+      <div style="display:flex; align-items:center; background:#eee; padding:6px 12px; border-radius:16px; margin-bottom:16px;">
+        <span style="margin-right:8px;">🔍</span>
+        <input type="text" placeholder="商品を検索" style="border:none; background:transparent; width:100%; outline:none;">
+        <span>✕</span>
+      </div>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="img-placeholder"><img src="./images/product_sample.png" alt="商品"></div>
+          <div class="product-title">ジュース引換券</div>
+          <div class="product-price">300 Pt</div>
+          <a href="./exchange_confirm.html" class="btn btn-primary" style="padding:4px; font-size:11px; margin:0;">購入</a>
+        </div>
+        <div class="product-card">
+          <div class="img-placeholder"><img src="./images/product_sample.png" alt="商品"></div>
+          <div class="product-title">お菓子セット</div>
+          <div class="product-price">500 Pt</div>
+          <a href="./exchange_confirm.html" class="btn btn-primary" style="padding:4px; font-size:11px; margin:0;">購入</a>
+        </div>
+        <div class="product-card">
+          <div class="img-placeholder"><img src="./images/product_sample.png" alt="商品"></div>
+          <div class="product-title">コーヒー無料券</div>
+          <div class="product-price">400 Pt</div>
+          <a href="./exchange_confirm.html" class="btn btn-primary" style="padding:4px; font-size:11px; margin:0;">購入</a>
+        </div>
+      </div>
+      <a href="./index.html" class="btn btn-return-home">ホームへ戻る</a>
+    </main>
+
+    
+    <footer class="footer-nav">
+      <a href="./settings.html" class="nav-item">
+        <div class="nav-icon"><img src="./images/icon_settings.png" alt="設定" onerror="this.remove()">⚙</div>
+        <span>設定</span>
+      </a>
+      <a href="./game_list.html" class="nav-item">
+        <div class="nav-icon"><img src="./images/icon_game.png" alt="ゲーム" onerror="this.remove()">🎮</div>
+        <span>ゲーム</span>
+      </a>
+      <a href="./ranking_list.html" class="nav-item">
+        <div class="nav-icon"><img src="./images/icon_ranking.png" alt="ランキング" onerror="this.remove()">👑</div>
+        <span>ランキング</span>
+      </a>
+      <a href="./mail_list.html" class="nav-item">
+        <div class="nav-icon"><img src="./images/icon_mail.png" alt="メール" onerror="this.remove()">✉</div>
+        <span>メール</span>
+      </a>
+      <a href="./photo_prep.html" class="nav-item">
+        <div class="nav-icon" style="background:#333; color:#fff;"><img src="./images/icon_camera.png" alt="撮影" onerror="this.remove()">📷</div>
+        <span>撮影</span>
+      </a>
+    </footer>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

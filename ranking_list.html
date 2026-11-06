@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ランキング - Trashbusters</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="status-bar">
+      <span>9:30</span>
+      <span>📶 🔋</span>
+    </div>
+    
+    <header class="app-header">
+      <div class="header-title">ランキング</div>
+    </header>
+    <main class="main-content">
+      <div style="background:#eee; border-radius:8px; padding:12px; margin-bottom:16px;">
+        <div style="padding:8px; background:#fff; border-radius:4px; margin-bottom:6px; font-weight:bold;">一位: 利用者A (2,500 Pt)</div>
+        <div style="padding:8px; background:#fff; border-radius:4px; margin-bottom:6px;">二位: 利用者B (1,800 Pt)</div>
+        <div style="padding:8px; background:#fff; border-radius:4px;">三位: 利用者C (1,200 Pt)</div>
+      </div>
+      <a href="./ranking_all_points.html" class="btn">全期間ポイント数のランキング</a>
+      <a href="./ranking_daily_items.html" class="btn">一日の拾い物ランキング</a>
+      <a href="./ranking_daily_items.html" class="btn">デイリー</a>
+      <a href="./ranking_current_points.html" class="btn">現在のポイント数ランキング</a>
+      <a href="./index.html" class="btn btn-return-home">ホームへ戻る</a>
+    </main>
+
+    
+    <footer class="footer-nav">
+      <a href="./settings.html" class="nav-item">
+        <div class="nav-icon"><img src="./images/icon_settings.png" alt="設定" onerror="this.remove()">⚙</div>
+        <span>設定</span>
+      </a>
+      <a href="./game_list.html" class="nav-item">
+        <div class="nav-icon"><img src="./images/icon_game.png" alt="ゲーム" onerror="this.remove()">🎮</div>
+        <span>ゲーム</span>
+      </a>
+      <a href="./ranking_list.html" class="nav-item">
+        <div class="nav-icon"><img src="./images/icon_ranking.png" alt="ランキング" onerror="this.remove()">👑</div>
+        <span>ランキング</span>
+      </a>
+      <a href="./mail_list.html" class="nav-item">
+        <div class="nav-icon"><img src="./images/icon_mail.png" alt="メール" onerror="this.remove()">✉</div>
+        <span>メール</span>
+      </a>
+      <a href="./photo_prep.html" class="nav-item">
+        <div class="nav-icon" style="background:#333; color:#fff;"><img src="./images/icon_camera.png" alt="撮影" onerror="this.remove()">📷</div>
+        <span>撮影</span>
+      </a>
+    </footer>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
