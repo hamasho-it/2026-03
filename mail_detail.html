@@ -3,51 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>メール詳細 - Trashbusters</title>
+  <title>Trashbusters - メール詳細</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <div class="app-container">
-    <div class="status-bar">
-      <span>9:30</span>
-      <span>📶 🔋</span>
-    </div>
-    
     <header class="app-header">
-      <div class="header-title">メール詳細</div>
+      <span>メール開く</span>
+      <span>9:30</span>
     </header>
+
     <main class="main-content">
-      <div style="border:1px solid #ccc; border-radius:8px; padding:16px; background:#fff; margin-bottom:16px;">
-        <h3 style="margin-bottom:8px;">ごみ拾いイベントのお知らせ</h3>
-        <p style="font-size:12px; color:#666; margin-bottom:16px;">送信日: 2026-11-01</p>
-        <p style="font-size:14px; line-height:1.6;">今週末にサンプル町1-1にて地域美化清掃イベントを開催します。ぜひご参加ください！</p>
+      <div style="width: 100%; border: 1px solid #ccc; padding: 16px; border-radius: 4px;">
+        <h3 style="margin-bottom: 8px;">【土丞邊町】美化活動キャンペーンのお知らせ</h3>
+        <p style="font-size: 12px; color: #666; margin-bottom: 16px;">差出人: 土丞邊町地域振興課</p>
+        <p style="font-size: 14px; line-height: 1.6;">
+          いつもTrashbustersをご利用いただきありがとうございます。<br><br>
+          今週末、土丞邊町エリアにて特別ごみ拾いイベントを開催します。対象エリアで拾ったごみは獲得ポイントが1.5倍になります！皆様のご参加をお待ちしております。
+        </p>
       </div>
-      <a href="./index.html" class="btn btn-return-home">ホーム</a>
+      <a href="./mail_list.html" class="btn btn-block" style="margin-top: 16px;">メール一覧へ戻る</a>
     </main>
 
     
-    <footer class="footer-nav">
-      <a href="./settings.html" class="nav-item">
-        <div class="nav-icon"><img src="./images/icon_settings.png" alt="設定" onerror="this.remove()">⚙</div>
-        <span>設定</span>
-      </a>
-      <a href="./game_list.html" class="nav-item">
-        <div class="nav-icon"><img src="./images/icon_game.png" alt="ゲーム" onerror="this.remove()">🎮</div>
-        <span>ゲーム</span>
-      </a>
-      <a href="./ranking_list.html" class="nav-item">
-        <div class="nav-icon"><img src="./images/icon_ranking.png" alt="ランキング" onerror="this.remove()">👑</div>
-        <span>ランキング</span>
-      </a>
-      <a href="./mail_list.html" class="nav-item">
-        <div class="nav-icon"><img src="./images/icon_mail.png" alt="メール" onerror="this.remove()">✉</div>
-        <span>メール</span>
-      </a>
-      <a href="./photo_prep.html" class="nav-item">
-        <div class="nav-icon" style="background:#333; color:#fff;"><img src="./images/icon_camera.png" alt="撮影" onerror="this.remove()">📷</div>
-        <span>撮影</span>
-      </a>
-    </footer>
+    <div class="bottom-nav-container">
+      <a href="./index.html" class="btn-home-back">ホームへ戻る</a>
+      <nav class="nav-bar">
+        <a href="./settings.html" class="nav-item">
+          <img src="./images/icon_setting.png" alt="設定" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='設';">
+          設定
+        </a>
+        <a href="./game.html" class="nav-item">
+          <img src="./images/icon_game.png" alt="ゲーム" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='遊';">
+          ゲーム
+        </a>
+        <a href="./camera.html" class="nav-camera-btn">
+          📷
+        </a>
+        <a href="./ranking.html" class="nav-item">
+          <img src="./images/icon_ranking.png" alt="ランキング" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='順';">
+          ランキング
+        </a>
+        <a href="./mail_list.html" class="nav-item">
+          <img src="./images/icon_mail.png" alt="メール" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='信';">
+          メール
+        </a>
+      </nav>
+    </div>
+
   </div>
   <script src="./script.js"></script>
 </body>

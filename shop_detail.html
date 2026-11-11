@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trashbusters - 商品詳細・交換</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <span>選択した商品の詳細</span>
+      <span>9:30</span>
+    </header>
+
+    <main class="main-content">
+      <div class="image-placeholder" style="width: 100%; height: 140px; margin-bottom: 12px;">
+        連携した企業の商品
+      </div>
+
+      <div style="width: 100%; font-size: 13px; line-height: 1.5; text-align: left; margin-bottom: 16px;">
+        <strong>【土丞邊町サンプル商店】お買い物100円券</strong><br>
+        -----------------------------<br>
+        土丞邊町内のサンプル商店全店舗でご利用いただける100円引き電子クーポンです。<br>
+        必要ポイント: 100 Pt<br>
+        有効期限: 発行より30日間<br>
+        -----------------------------
+      </div>
+
+      <button id="btn-exchange" class="btn btn-primary btn-block">交換する</button>
+    </main>
+
+    <!-- 交換完了モーダル -->
+    <div id="exchange-modal" class="modal">
+      <div class="modal-content">
+        <h3>交換完了</h3>
+        <p style="margin: 16px 0; font-size: 14px;">商品の交換が完了しました！</p>
+        <button id="btn-modal-close" class="btn btn-primary">ホームへ戻る</button>
+      </div>
+    </div>
+
+    
+    <div class="bottom-nav-container">
+      <a href="./index.html" class="btn-home-back">ホームへ戻る</a>
+      <nav class="nav-bar">
+        <a href="./settings.html" class="nav-item">
+          <img src="./images/icon_setting.png" alt="設定" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='設';">
+          設定
+        </a>
+        <a href="./game.html" class="nav-item">
+          <img src="./images/icon_game.png" alt="ゲーム" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='遊';">
+          ゲーム
+        </a>
+        <a href="./camera.html" class="nav-camera-btn">
+          📷
+        </a>
+        <a href="./ranking.html" class="nav-item">
+          <img src="./images/icon_ranking.png" alt="ランキング" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='順';">
+          ランキング
+        </a>
+        <a href="./mail_list.html" class="nav-item">
+          <img src="./images/icon_mail.png" alt="メール" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='信';">
+          メール
+        </a>
+      </nav>
+    </div>
+
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

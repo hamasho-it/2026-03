@@ -3,59 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>設定 - Trashbusters</title>
+  <title>Trashbusters - 設定</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <div class="app-container">
-    <div class="status-bar">
-      <span>9:30</span>
-      <span>📶 🔋</span>
-    </div>
-    
     <header class="app-header">
-      <div class="header-title">設定</div>
+      <span>設定</span>
+      <span>9:30</span>
     </header>
+
     <main class="main-content">
-      <div class="toggle-row">
-        <span>設定1（通知設定）</span>
-        <button class="toggle-btn active">オン</button>
+      <div class="setting-row">
+        <span>設定1</span>
+        <div class="toggle-btn">
+          <button class="active">オン</button>
+          <button>オフ</button>
+        </div>
       </div>
-      <div class="toggle-row">
-        <span>設定2（位置情報）</span>
-        <button class="toggle-btn active">オン</button>
+      <div class="setting-row">
+        <span>設定2</span>
+        <div class="toggle-btn">
+          <button class="active">オン</button>
+          <button>オフ</button>
+        </div>
       </div>
-      <div class="toggle-row" style="margin-bottom: 20px;">
-        <span>設定3（ダークモード）</span>
-        <button class="toggle-btn">オフ</button>
+      <div class="setting-row">
+        <span>設定3</span>
+        <div class="toggle-btn">
+          <button>オン</button>
+          <button class="active">オフ</button>
+        </div>
       </div>
-      <a href="./settings_detail.html" class="btn">設定詳細</a>
-      <a href="./index.html" class="btn btn-return-home">ホームへ戻る</a>
     </main>
 
     
-    <footer class="footer-nav">
-      <a href="./settings.html" class="nav-item">
-        <div class="nav-icon"><img src="./images/icon_settings.png" alt="設定" onerror="this.remove()">⚙</div>
-        <span>設定</span>
-      </a>
-      <a href="./game_list.html" class="nav-item">
-        <div class="nav-icon"><img src="./images/icon_game.png" alt="ゲーム" onerror="this.remove()">🎮</div>
-        <span>ゲーム</span>
-      </a>
-      <a href="./ranking_list.html" class="nav-item">
-        <div class="nav-icon"><img src="./images/icon_ranking.png" alt="ランキング" onerror="this.remove()">👑</div>
-        <span>ランキング</span>
-      </a>
-      <a href="./mail_list.html" class="nav-item">
-        <div class="nav-icon"><img src="./images/icon_mail.png" alt="メール" onerror="this.remove()">✉</div>
-        <span>メール</span>
-      </a>
-      <a href="./photo_prep.html" class="nav-item">
-        <div class="nav-icon" style="background:#333; color:#fff;"><img src="./images/icon_camera.png" alt="撮影" onerror="this.remove()">📷</div>
-        <span>撮影</span>
-      </a>
-    </footer>
+    <div class="bottom-nav-container">
+      <a href="./index.html" class="btn-home-back">ホームへ戻る</a>
+      <nav class="nav-bar">
+        <a href="./settings.html" class="nav-item">
+          <img src="./images/icon_setting.png" alt="設定" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='設';">
+          設定
+        </a>
+        <a href="./game.html" class="nav-item">
+          <img src="./images/icon_game.png" alt="ゲーム" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='遊';">
+          ゲーム
+        </a>
+        <a href="./camera.html" class="nav-camera-btn">
+          📷
+        </a>
+        <a href="./ranking.html" class="nav-item">
+          <img src="./images/icon_ranking.png" alt="ランキング" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='順';">
+          ランキング
+        </a>
+        <a href="./mail_list.html" class="nav-item">
+          <img src="./images/icon_mail.png" alt="メール" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='信';">
+          メール
+        </a>
+      </nav>
+    </div>
+
   </div>
   <script src="./script.js"></script>
 </body>

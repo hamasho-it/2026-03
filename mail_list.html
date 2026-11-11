@@ -3,48 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>メール一覧 - Trashbusters</title>
+  <title>Trashbusters - メール一覧</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <div class="app-container">
-    <div class="status-bar">
-      <span>9:30</span>
-      <span>📶 🔋</span>
-    </div>
-    
     <header class="app-header">
-      <div class="header-title">メール一覧</div>
+      <span>メール一覧</span>
+      <span>9:30</span>
     </header>
+
     <main class="main-content">
-      <a href="./mail_detail.html" class="btn">メール1：ごみ拾いイベントのお知らせ</a>
-      <a href="./mail_detail.html" class="btn">メール2：ポイント付与完了通知</a>
-      <a href="./index.html" class="btn btn-return-home">ホームへ戻る</a>
+      <div class="mail-list">
+        <a href="./mail_detail.html" class="mail-item">
+          <span>【土丞邊町】美化活動キャンペーンのお知らせ</span>
+          <span class="mail-unread-dot"></span>
+        </a>
+        <a href="./mail_detail.html" class="mail-item">
+          <span>【丞辺海岸】ごみ拾いスポット更新</span>
+          <span class="mail-unread-dot"></span>
+        </a>
+        <a href="./mail_detail.html" class="mail-item">
+          <span>【匹荷駅前カフェ】ポイント交換ありがとうございました</span>
+          <span></span>
+        </a>
+      </div>
+
+      <div class="mail-actions">
+        <button id="btn-read-all" class="btn btn-block">すべて既読にする</button>
+        <button id="btn-delete-all" class="btn btn-block">すべて削除する</button>
+      </div>
     </main>
 
     
-    <footer class="footer-nav">
-      <a href="./settings.html" class="nav-item">
-        <div class="nav-icon"><img src="./images/icon_settings.png" alt="設定" onerror="this.remove()">⚙</div>
-        <span>設定</span>
-      </a>
-      <a href="./game_list.html" class="nav-item">
-        <div class="nav-icon"><img src="./images/icon_game.png" alt="ゲーム" onerror="this.remove()">🎮</div>
-        <span>ゲーム</span>
-      </a>
-      <a href="./ranking_list.html" class="nav-item">
-        <div class="nav-icon"><img src="./images/icon_ranking.png" alt="ランキング" onerror="this.remove()">👑</div>
-        <span>ランキング</span>
-      </a>
-      <a href="./mail_list.html" class="nav-item">
-        <div class="nav-icon"><img src="./images/icon_mail.png" alt="メール" onerror="this.remove()">✉</div>
-        <span>メール</span>
-      </a>
-      <a href="./photo_prep.html" class="nav-item">
-        <div class="nav-icon" style="background:#333; color:#fff;"><img src="./images/icon_camera.png" alt="撮影" onerror="this.remove()">📷</div>
-        <span>撮影</span>
-      </a>
-    </footer>
+    <div class="bottom-nav-container">
+      <a href="./index.html" class="btn-home-back">ホームへ戻る</a>
+      <nav class="nav-bar">
+        <a href="./settings.html" class="nav-item">
+          <img src="./images/icon_setting.png" alt="設定" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='設';">
+          設定
+        </a>
+        <a href="./game.html" class="nav-item">
+          <img src="./images/icon_game.png" alt="ゲーム" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='遊';">
+          ゲーム
+        </a>
+        <a href="./camera.html" class="nav-camera-btn">
+          📷
+        </a>
+        <a href="./ranking.html" class="nav-item">
+          <img src="./images/icon_ranking.png" alt="ランキング" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='順';">
+          ランキング
+        </a>
+        <a href="./mail_list.html" class="nav-item">
+          <img src="./images/icon_mail.png" alt="メール" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='信';">
+          メール
+        </a>
+      </nav>
+    </div>
+
   </div>
   <script src="./script.js"></script>
 </body>

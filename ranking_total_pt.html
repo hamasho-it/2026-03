@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trashbusters - 全期間ポイント数のランキング</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <span>全期間ポイント数のランキング</span>
+      <span>9:30</span>
+    </header>
+
+    <main class="main-content">
+      
+    <div class="ranking-tabs">
+      <a href="./ranking_total_pt.html" class="btn ranking-tab-btn">全期間ポイント数</a>
+      <a href="./ranking_daily_trash.html" class="btn ranking-tab-btn">一日の拾い物</a>
+      <a href="./ranking_total_trash.html" class="btn ranking-tab-btn">全期間の拾い物</a>
+      <a href="./ranking_current_pt.html" class="btn ranking-tab-btn">現在のポイント数</a>
+    </div>
+
+
+      <table class="ranking-table">
+        <thead>
+          <tr><th>順位</th><th>ユーザー名</th><th>ポイント</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>一位</td><td>サンプルユーザー</td><td>12,500 Pt</td></tr>
+          <tr><td>二位</td><td>利用者A</td><td>9,800 Pt</td></tr>
+          <tr><td>三位</td><td>利用者B</td><td>7,200 Pt</td></tr>
+        </tbody>
+      </table>
+    </main>
+
+    
+    <div class="bottom-nav-container">
+      <a href="./index.html" class="btn-home-back">ホームへ戻る</a>
+      <nav class="nav-bar">
+        <a href="./settings.html" class="nav-item">
+          <img src="./images/icon_setting.png" alt="設定" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='設';">
+          設定
+        </a>
+        <a href="./game.html" class="nav-item">
+          <img src="./images/icon_game.png" alt="ゲーム" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='遊';">
+          ゲーム
+        </a>
+        <a href="./camera.html" class="nav-camera-btn">
+          📷
+        </a>
+        <a href="./ranking.html" class="nav-item">
+          <img src="./images/icon_ranking.png" alt="ランキング" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='順';">
+          ランキング
+        </a>
+        <a href="./mail_list.html" class="nav-item">
+          <img src="./images/icon_mail.png" alt="メール" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='信';">
+          メール
+        </a>
+      </nav>
+    </div>
+
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

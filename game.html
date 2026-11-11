@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trashbusters - ゲーム</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <span>ゲーム</span>
+      <span>9:30</span>
+    </header>
+
+    <main class="main-content">
+      <div class="image-placeholder" style="width: 100%; height: 200px; margin-bottom: 16px;">
+        <img src="./images/game_main.png" alt="ゲーム画面" class="img-fluid" onerror="this.replaceWith(document.createTextNode('ごみ拾いミニゲームエリア'));">
+      </div>
+
+      <p style="margin-bottom: 12px;">ボタンを連打してごみを回収しよう！</p>
+      <button id="btn-game-action" class="btn btn-primary btn-block" style="padding: 16px;">ごみを拾う！</button>
+      <div id="game-score" style="font-size: 18px; font-weight: bold; margin-top: 16px;">0 Pt獲得！</div>
+    </main>
+
+    
+    <div class="bottom-nav-container">
+      <a href="./index.html" class="btn-home-back">ホームへ戻る</a>
+      <nav class="nav-bar">
+        <a href="./settings.html" class="nav-item">
+          <img src="./images/icon_setting.png" alt="設定" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='設';">
+          設定
+        </a>
+        <a href="./game.html" class="nav-item">
+          <img src="./images/icon_game.png" alt="ゲーム" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='遊';">
+          ゲーム
+        </a>
+        <a href="./camera.html" class="nav-camera-btn">
+          📷
+        </a>
+        <a href="./ranking.html" class="nav-item">
+          <img src="./images/icon_ranking.png" alt="ランキング" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='順';">
+          ランキング
+        </a>
+        <a href="./mail_list.html" class="nav-item">
+          <img src="./images/icon_mail.png" alt="メール" class="nav-icon image-placeholder" onerror="this.replaceWith(document.createElement('div')); this.classList.add('nav-icon'); this.textContent='信';">
+          メール
+        </a>
+      </nav>
+    </div>
+
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
