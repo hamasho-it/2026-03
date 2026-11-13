@@ -1,14 +1,30 @@
 /* style.css - Trashbusters Common Design */
+:root {
+  --color-primary: #1B6B50;       /* メインの色（見出し・上の帯） */
+  --color-primary-dark: #14523D;  /* メイン色のホバー・強調用 */
+  --color-accent: #F2A33A;        /* 強調の色（主なボタン） */
+  --color-accent-dark: #D98B26;   /* 強調色のホバー・押下時 */
+  --color-bg: #F8FAF9;            /* 背景の色 */
+  --color-surface: #FFFFFF;       /* カード・ナビゲーションの白背景 */
+  --color-text: #1E293B;          /* 文字の色 */
+  --color-text-muted: #64748B;    /* 補足文字の色 */
+  --color-border: #E2E8F0;        /* 清潔感のある薄い境界線 */
+  --color-danger: #EF4444;        /* 警告・戻るなどの赤系 */
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Segoe UI", Roboto, sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #E2E8F0;
+  color: var(--color-text);
+  font-size: 16px;
+  line-height: 1.5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,117 +35,161 @@ body {
 .app-container {
   width: 100%;
   max-width: 414px;
-  height: 736px;
-  background-color: #ffffff;
-  border: 2px solid #ccc;
-  border-radius: 20px;
+  height: 100vh;
+  max-height: 812px;
+  background-color: var(--color-bg);
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 32px rgba(27, 107, 80, 0.12);
+}
+
+/* スマートフォン実機幅では全画面表示にして見やすくする */
+@media (max-width: 480px) {
+  .app-container {
+    max-width: 100%;
+    height: 100dvh;
+    max-height: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
 }
 
 /* Status Bar */
 .status-bar {
-  height: 24px;
-  background-color: #e0e0e0;
+  height: 28px;
+  background-color: var(--color-primary-dark);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
   font-size: 12px;
-  font-weight: bold;
-  color: #666;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Header */
 .app-header {
-  padding: 12px 16px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
+  padding: 14px 16px;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 10;
 }
 
 .header-title {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .point-display {
-  background-color: #eee;
-  padding: 6px 12px;
-  border-radius: 12px;
-  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-weight: 700;
   font-size: 14px;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Main Content Area */
 .main-content {
   flex: 1;
-  padding: 16px;
+  padding: 20px 16px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  font-size: 16px;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3 {
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.main-content p {
+  font-size: 16px;
+  margin-bottom: 12px;
 }
 
 /* Buttons */
 .btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   width: 100%;
-  padding: 12px 16px;
+  min-height: 48px; /* 44px以上のタップ領域を確保 */
+  padding: 12px 20px;
   margin-bottom: 12px;
-  background-color: #e0e0e0;
-  color: #333;
+  background-color: var(--color-surface);
+  color: var(--color-text);
   text-align: center;
   text-decoration: none;
-  border: 1px solid #999;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: bold;
+  border: 1.5px solid var(--color-border);
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
   cursor: pointer;
-  box-sizing: border-box;
+  transition: transform 0.1s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(30, 41, 59, 0.04);
 }
 
 .btn:active {
-  background-color: #bbb;
+  transform: scale(0.98);
+  background-color: #F1F5F9;
 }
 
 .btn-primary {
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #000;
+  background-color: var(--color-accent);
+  color: var(--color-text); /* 黄色・オレンジ背景上で最も読みやすい濃紺文字 */
+  border: none;
+  box-shadow: 0 4px 12px rgba(242, 163, 58, 0.35);
+}
+
+.btn-primary:active {
+  background-color: var(--color-accent-dark);
 }
 
 .btn-danger {
-  background-color: #777;
-  color: #fff;
+  background-color: #64748B;
+  color: #FFFFFF;
+  border: none;
 }
 
 .btn-return-home {
-  background-color: #eeeeee;
-  color: #d9534f;
-  border: 1px solid #d9534f;
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
   margin-top: auto;
-  margin-bottom: 12px;
-  text-align: center;
+  margin-bottom: 8px;
+}
+
+.btn-return-home:active {
+  background-color: rgba(27, 107, 80, 0.08);
 }
 
 /* Image Placeholder */
 .img-placeholder {
   width: 100%;
-  height: 120px;
-  background-color: #cccccc;
+  height: 140px;
+  background-color: #E2E8F0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #666666;
+  color: var(--color-text-muted);
   font-size: 14px;
-  border-radius: 8px;
-  margin-bottom: 12px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  overflow: hidden;
 }
 
 .img-placeholder img {
@@ -141,67 +201,100 @@ body {
 /* Grid for Shop */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-bottom: 16px;
+  grid-template-columns: repeat(2, 1fr); /* スマホで文字やボタンが見やすい2列配置 */
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .product-card {
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 12px;
   text-align: center;
-  background: #fafafa;
+  background-color: var(--color-surface);
+  box-shadow: 0 2px 6px rgba(30, 41, 59, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-card .img-placeholder {
-  height: 60px;
-  font-size: 10px;
+  height: 80px;
+  font-size: 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
 }
 
 .product-title {
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
   margin: 4px 0;
 }
 
 .product-price {
-  font-size: 11px;
-  color: #666;
-  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.product-card .btn {
+  min-height: 44px;
+  padding: 8px 12px;
+  font-size: 14px;
+  margin-bottom: 0;
 }
 
 /* Footer Navigation */
 .footer-nav {
-  height: 60px;
-  background-color: #ffffff;
-  border-top: 1px solid #e0e0e0;
+  height: 68px;
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: relative;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .nav-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
-  color: #555;
-  font-size: 11px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 600;
   width: 20%;
+  min-height: 48px;
+  transition: color 0.2s ease;
 }
 
+.nav-item:active,
+.nav-item.active {
+  color: var(--color-primary);
+}
+
+/* Material Symbols / 絵文字アイコン対応 */
 .nav-icon {
-  width: 24px;
-  height: 24px;
-  background-color: #ccc;
-  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  border-radius: 8px;
   margin-bottom: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.material-symbols-outlined,
+.material-symbols-rounded {
+  font-size: 24px;
+  line-height: 1;
+  vertical-align: middle;
 }
 
 /* Toggle Switch */
@@ -209,18 +302,30 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
-  border-bottom: 1px solid #eee;
+  padding: 14px 16px;
+  background-color: var(--color-surface);
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .toggle-btn {
-  padding: 6px 12px;
-  border: 1px solid #999;
-  border-radius: 4px;
-  background: #eee;
+  min-height: 44px;
+  min-width: 72px;
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 700;
   cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
+
 .toggle-btn.active {
-  background: #333;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border-color: var(--color-primary);
 }
